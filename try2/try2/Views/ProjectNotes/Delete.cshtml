@@ -1,0 +1,41 @@
+﻿
+
+@model try2.Models.Note
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Note</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.NotesName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NotesName)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.NotesDetail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NotesDetail)
+    </div>
+
+
+
+</fieldset>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+
+

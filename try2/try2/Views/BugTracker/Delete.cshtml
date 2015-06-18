@@ -1,0 +1,75 @@
+﻿
+@model try2.Models.BugTracker
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Character</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.BugID);
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BugID);
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Reporter)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Reporter)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Customer)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Customer)
+    </div>
+
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.BugResolution);
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BugResolution);
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Component)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Component)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Priority)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Priority)
+    </div>  
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "BugsList")
+    </p>
+}

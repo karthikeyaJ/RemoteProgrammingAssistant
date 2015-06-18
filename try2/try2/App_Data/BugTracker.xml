@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bugtrackers>
+  <bugtracker>
+    <bugID>123</bugID>
+    <reporter>karthikeya</reporter>
+    <customer>Rakesh</customer>
+    <bugresolution>yes try to fix this</bugresolution>
+    <component>model part</component>
+    <priority>Low</priority>
+    <description>description goes here</description>
+    <status>Not Started</status>
+  </bugtracker>
+  <bugtracker>
+    <bugID>007</bugID>
+    <reporter>akhilesh</reporter>
+    <customer>rakesh</customer>
+    <bugresolution>hello how are you</bugresolution>
+    <component>first</component>
+    <priority>HIgh</priority>
+    <description>Do it quickly</description>
+    <status>Pending</status>
+  </bugtracker>
+</bugtrackers>

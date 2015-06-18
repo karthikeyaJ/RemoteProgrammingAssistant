@@ -1,0 +1,102 @@
+﻿
+@model try2.Models.BugTracker
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>BugTracker</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BugID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BugID, new { autofocus = "autofocus" })
+            @Html.ValidationMessageFor(model => model.BugID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Reporter)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Reporter)
+            @Html.ValidationMessageFor(model => model.Reporter)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Customer)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Customer)
+            @Html.ValidationMessageFor(model => model.Customer)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BugResolution)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.BugResolution, new { autofocus = "autofocus" })
+            @Html.ValidationMessageFor(model => model.BugResolution)
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Component)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Component)
+            @Html.ValidationMessageFor(model => model.Component)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Priority)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Priority)
+            @Html.ValidationMessageFor(model => model.Priority)
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Status)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Status)
+            @Html.ValidationMessageFor(model => model.Status)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "BugsList")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+

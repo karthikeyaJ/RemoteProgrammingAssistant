@@ -1,0 +1,82 @@
+﻿
+
+@model IEnumerable<try2.Models.BugTracker>
+
+@{
+    ViewBag.Title = "BugsList";
+}
+
+
+
+
+<h2>BugsList</h2>
+
+<p>
+    <table class="table indent">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BugID)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reporter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BugResolution)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Component)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Priority)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+
+            <th>Views</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BugID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Reporter)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BugResolution)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Component)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Priority)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+               
+
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </table>
+</p>
+<div class="indent">
+    @Html.ActionLink("Create New", "Create")
+</div>

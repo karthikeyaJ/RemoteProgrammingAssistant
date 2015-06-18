@@ -1,0 +1,71 @@
+section#contact {
+	color: #ccc;
+	background:#fafafa;
+	display:block;
+	width:600px;
+	padding:20px;
+	border: solid 1px #f1f1f1;
+	font-family: 'Patua One', sans serif;
+}
+
+#contact p{font-size: 18px;}
+
+ .cform-text {width: 400px;}
+
+ #contact input[type=text], select {
+	height: 3.25em;
+}
+
+select {
+	background: #f1f1f1;
+	font-family: 'Patua One', sans serif;
+	border: 0;
+	box-shadow: 2px 2px 2px #888;
+	width: 410px;
+	vertical-align: middle;
+}
+
+#contact input[type=text], textarea {
+	background: #f1f1f1;
+	font-family: 'Patua One', sans serif;
+	border: 0;
+	box-shadow: 2px 2px 2px #888;
+	width: 400px;
+	text-align: left;
+	vertical-align: middle;
+}
+#contact input[type=text]:focus, textarea:focus, select:focus {
+	background: #e5e5e5;
+	font-family: 'Patua One', sans serif;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	transition: background 0.25 ease-in;
+	-moz-transition: background 0.25 ease-in;
+	-webkit-transition: background 0.25 ease-in;
+}
+
+input[type=submit] {
+	font-family: 'Patua One', cursive;
+	color: #fff;
+	width: 185px;
+	height: 60px;
+	text-shadow: none;
+	font-size: 1.3125em;
+	padding:0.5em;
+	letter-spacing: 0.05em;
+	margin: 0 0 20px 0;
+	display: block;
+	border: 0;
+	text-transform: none;
+	background: #1abc9c !important;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+
+}
+
+h1{color:#1abc9c; padding-bottom: 40px;padding-top: 20px; font-family: 'Patua One'}

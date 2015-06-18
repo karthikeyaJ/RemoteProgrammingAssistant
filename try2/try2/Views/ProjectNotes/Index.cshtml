@@ -1,0 +1,46 @@
+﻿
+    @model IEnumerable<try2.Models.Note>
+
+    @{
+        ViewBag.Title = "Index";
+    }
+
+
+
+
+    <h2>Project Notes</h2>
+
+<p>
+    <table class="table indent">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NotesName)
+
+            </th>
+            
+
+            <th>Views</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotesName)
+                </td>             
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </table>
+</p>
+<div class="indent">
+    @Html.ActionLink("Create New", "Create")
+</div>
+
+
+

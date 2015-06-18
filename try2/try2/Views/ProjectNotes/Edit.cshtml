@@ -1,0 +1,48 @@
+﻿
+@model try2.Models.Note
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Note</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NotesName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NotesName, new { autofocus = "autofocus" })
+            @Html.ValidationMessageFor(model => model.NotesName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NotesDetail)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.NotesDetail)
+            @Html.ValidationMessageFor(model => model.NotesDetail)
+        </div>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
