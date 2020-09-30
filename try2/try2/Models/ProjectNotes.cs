@@ -71,9 +71,14 @@ namespace try2.Models
         }
         public Note FindNoteById(int id)
         {
+            //use { and } improving code readabilty
             foreach (Note c in this.Notes)
+            {
                 if (c.id == id)
+                {
                     return c;
+                }
+            }
             Note rtn = new Note();
             rtn.id = -1;
             rtn.NotesName = "Error";
